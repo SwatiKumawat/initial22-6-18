@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 import time
 import commands
@@ -11,28 +11,27 @@ Press 3 to check for google access
 '''
 print(object)
 #storing the value in a variable 
-choice=input()
+choice=raw_input()
 #if user press 1 check for cable connectivity
 if choice == '1'  :
-        print("please wait internet cable is being checked")
-        cable=commands.getoutput('mii-tool eno1')
+        print "please wait internet cable is being checked"
+        cable=commands.getoutput('sudo mii-tool eno1')
         if 'link ok' in cable_check :
-                print ("cable is connected")
+                print "cable is connected"
         else :
-                print ("not connected")
+                print "not connected"
 #if user press 2 check for internet connectivity
 
 elif choice == '2' :
-	print("please wait internet connectivity is being checked")
+	print "please wait internet connectivity is being checked"
 #if user press 3 check for google access 
 
 elif choice == '3' :
-	print ("checking for google access")	
+	print "checking for google access"	
 # otherwise specify a wrong choice
 
 else :
-	print ("wrong option")
+	print "wrong option"
 
-time.sleep(3)
-print (object)
+
 
